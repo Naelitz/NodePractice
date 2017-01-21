@@ -5,21 +5,27 @@
 #include "Node.h"
 #include <cstdlib>
 #include <iostream>
+#include <random>
 
 using namespace std;
 
+std::mt19937 mt;
+std::uniform_int_distribution<int> dist(0, INT32_MAX);
+
 int main()
 {
-	int intRandomNumber = rand();
+	int intRandomNumber = dist(mt);
+
+	
 	Node theFirstNode;
 	theFirstNode.SetValue(intRandomNumber);
 	Node* pntCurrentNode;
 	void AddRandomNumber(Node* theCurrentNode, int intRandomNumber);
 
-	for (int intCounter = 0; intCounter < 100000; intCounter++)
+	for (int intCounter = 0; intCounter < 10000000; intCounter++)
 	{
 		pntCurrentNode = &theFirstNode;
-		intRandomNumber = rand();
+		intRandomNumber = dist(mt);
 		AddRandomNumber(pntCurrentNode, intRandomNumber);
 
 	}
