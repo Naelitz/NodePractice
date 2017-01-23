@@ -13,6 +13,7 @@ public:
 	void SetLeftNode(Node* theNode);
 	void SetLastNode(Node* theNode);
 	void IncrementOccurence();
+	int GetOccurences();
 	Node* GetLeftNode();
 	Node* GetRightNode();
 	Node* GetLastNode();

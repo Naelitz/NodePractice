@@ -36,6 +36,11 @@ void Node::IncrementOccurence()
 	intOccurences++;
 }
 
+int Node::GetOccurences()
+{
+	return intOccurences;
+}
+
 Node* Node::GetLeftNode()
 {
 	return leftNode;
